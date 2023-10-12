@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+body {
+    background: url(img/background3.png);
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    height: 50%;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding-left: 30px;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    padding-right: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .2s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+    color: coral;
+}
+
+.container, .text-1 span {
+    font-size: 40px;
+    padding-left: 200px;
+    padding-top: 200px;
+    color: white;
+}
+
+.text-1 span {
+    animation: back 1s ;
+    opacity: 1;
+}
+
+
+@keyframes back {
+    from{ 
+        padding-left: 0px;
+        opacity: 0;
+    }
+    to {  
+        padding-left: 200px;
+        opacity: 1;
+    }
+}
+
+.btn button  {
+    padding: 20px 60px;
+    background-color: #808080;
+    color: white;
+    font-size: 20px;
+    margin-left:400px;
+    margin-top: 40px;
+    text-decoration: none;
+    animation: buttonRight 1s;
+    opacity: 1;
+    animation-delay: .1s;
+}
+
+@keyframes buttonRight {
+    from{ 
+        margin-left: 0;
+        opacity: 0;
+    }
+    to {  
+        margin-left:400px;
+        opacity: 1;
+    }
+}
+
+.btn button:hover {
+    color: black;
+    background-color: white;
+}
+
+.sideimg img {
+    position: absolute;
+    width: 230px;
+    height: 200px;
+    padding-left: 1050px;
+    padding-top: 100px;
+    animation: image 2s;
+    animation-delay: 1s;
+    opacity: 1;
+    z-index: 5;
+}
+
+@keyframes image {
+    0%{
+        padding-left: 1200px;
+    }
+    20% {
+        padding-left: 1100px;
+    }
+    50% {
+        padding-left: 1200px;
+    }
+    80% {
+        padding-left: 1200px;
+    }
+    100% {
+        padding-left: 1050px;
+    }
+}
